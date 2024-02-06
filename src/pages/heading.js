@@ -1,3 +1,3 @@
 export default function heading() {
-  return <div> Test</div>;
+  return <div style={{ backgroundColor: "red" }}> Test</div>;
 }

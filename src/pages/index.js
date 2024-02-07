@@ -2,7 +2,7 @@ export default function Home() {
   console.log("hola");
   return (
     <main>
-      <div class="dark" className="flex bg-black dark:text-red-500">
+      <div className="flex bg-black">
         test1
         <p>Index</p>
       </div>

@@ -1,3 +1,8 @@
 export default function heading() {
-  return <div style={{ backgroundColor: "red" }}> Test</div>;
+  return (
+    <div style={{ background: "red" }}>
+      <div></div>
+      Heading
+    </div>
+  );
 }

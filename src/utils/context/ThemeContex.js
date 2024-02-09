@@ -1,29 +1,21 @@
-import { createContext, useContext, useReducer } from "react";
-
+import { createContext, useReducer } from "react";
+//1 create context
 const ThemeContext = createContext();
 
+//3 Initial state reducer obj
+
 const initialState = {
-  theme: "light",
-  userPreferences: {
-    fontSize: "medium",
-    reduceAnimations: false,
-  },
+  backgroundColor: "black",
+  textColor: "white",
 };
 
+//4 create reducer function dispatcher
+
 function themeReducer(state, action) {
-  // your code here
   switch (action.type) {
-    case "toDarkMode": {
-      return {
-        ...state,
-        theme: "dark",
-      };
+    case "toDark": {
     }
-    case "toLightMode": {
-      return {
-        ...state,
-        theme: "light",
-      };
+    case "toLight": {
     }
     default: {
       throw Error("Unknown action: " + action.type);
@@ -31,10 +23,8 @@ function themeReducer(state, action) {
   }
 }
 
+//2 Define Provider
 export const ThemeProvider = ({ children }) => {
-  // your code here
-  const [state, dispatch] = useReducer(themeReducer, initialState);
+  //3 declare reducer
+  const [state, dispatch] = useReducer();
 };
-
-// Create and use your own hook instead of using useContext in the components
-export const useTheme = () => useContext(ThemeContext);

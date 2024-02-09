@@ -1,23 +1,23 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 //1 create context
 const ThemeContext = createContext();
 
 //3 Initial state reducer obj
 
 const initialState = {
-  backgroundColor: "dark",
-  textColor: "white",
+  background: "black",
+  text: "white",
 };
 
-//4 create reducer function dispatcher
+//4 Create reducer function dispatcher
 
 function themeReducer(state, action) {
   switch (action.type) {
     case "toLight": {
-      return { ...state, backgroundColor: "white", textColor: "black" };
+      return { ...state, background: "white", text: "black" };
     }
     case "toDark": {
-      return { ...state, backgroundColor: "black", textColor: "white" };
+      return { ...state, background: "black", text: "white" };
     }
     default: {
       throw Error("Unknown action: " + action.type);
@@ -37,3 +37,8 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+//7 comprimiendo el código aun mas
+export function useThemeContext() {
+  return useContext(ThemeContext);
+}

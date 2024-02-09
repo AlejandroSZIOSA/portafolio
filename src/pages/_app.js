@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
  */
 
 import { useEffect } from "react";
-import { ThemeProvider } from "../utils/context/ThemeContex";
+import { ThemeProvider } from "../utils/context/ThemeContext";
 import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {

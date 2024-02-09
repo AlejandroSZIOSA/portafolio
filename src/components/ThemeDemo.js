@@ -1,8 +1,10 @@
 import { useThemeContext } from "@/utils/context/ThemeContext";
 
 export default function ThemeDemo() {
+  //8 import context to the project
   const { state, dispatch } = useThemeContext();
 
+  //9 Consuming the Context with the reducer
   function handleToLightMode() {
     dispatch({ type: "toLight", background: "white", text: "black" });
   }

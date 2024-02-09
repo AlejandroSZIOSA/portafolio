@@ -1,5 +1,5 @@
 export default function Home() {
-  console.log("hola");
+  /* console.log("hola"); */
   return (
     <main>
       <div className="flex bg-black">

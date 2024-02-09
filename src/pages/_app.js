@@ -6,19 +6,19 @@ export default function App({ Component, pageProps }) {
  */
 
 import { useEffect } from "react";
-import { ThemeProvider, useTheme } from "../utils/context/ThemeContex";
+import { ThemeProvider } from "../utils/context/ThemeContex";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   /* const { state } = useTheme();
   
   useEffect(() => {
     
   }, [state.theme]); */
 
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
-
-export default ({ Component, pageProps }) => (
-  <MyApp Component={Component} pageProps={pageProps} />
-);

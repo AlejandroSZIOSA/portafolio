@@ -1,4 +1,4 @@
-//IPhone 12 Pro
+//INFO: IPhone 12 Pro
 const navItemBoxes = "w-[83px] h-9 bg-[#5B5B5B] rounded-sm underline";
 
 export default function Home() {

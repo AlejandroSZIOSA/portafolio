@@ -1,23 +1,31 @@
-const navItemBoxes = "w-[83px] h-9 bg-[#444444] rounded-sm underline";
+const navItemBoxes = "w-[83px] h-9 bg-[#5B5B5B] rounded-sm underline";
 
 export default function Home() {
   return (
     <div id="mainContainer" className="flex flex-col items-center">
       <header className="flex flex-col w-full bg-[#343434] items-center ">
-        <h1 className="text-[#F24E1E] my-3 text-6xl">Portafolio</h1>
-        <nav className="p-2">
-          <ul className="flex gap-2 text-2xl text-[#00D8FF] list-none m-0 p-0">
+        <h1 className="text-[#F24E1E] my-2 text-6xl">Portafolio</h1>
+        <nav className="p-4">
+          <ul className="flex gap-2 text-2xl list-none m-0 p-0">
             <li className={navItemBoxes}>
-              <a>Start</a>
+              <a href="#" className="text-[#00D8FF]">
+                Start
+              </a>
             </li>
             <li className={navItemBoxes}>
-              <a>Skills</a>
+              <a href="#" className="text-[#00D8FF]">
+                Skills
+              </a>
             </li>
             <li className={navItemBoxes}>
-              <a>Projects</a>
+              <a href="#" className="text-[#00D8FF]">
+                Projects
+              </a>
             </li>
             <li className={navItemBoxes}>
-              <a>Contact</a>
+              <a href="#" className="text-[#00D8FF]">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>

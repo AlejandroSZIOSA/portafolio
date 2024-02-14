@@ -1,7 +1,9 @@
-//INFO: IPhone 12 Pro
+//INFO: Mobile first to IPhone 12 Pro
+
+import HeroSection from "@/components/main/HeroSection";
 
 //Reusable styles
-const navItemBoxes = "w-[83px] h-9 bg-[#5B5B5B] rounded-sm underline";
+const navItemBoxes = "w-[83px] h-9 underline";
 
 export default function Home() {
   return (
@@ -34,13 +36,7 @@ export default function Home() {
         </nav>
       </header>
       <main className="py-4 m-0">
-        <section id="heroSection" className="flex flex-col items-center">
-          <div className="size-80 bg-white"></div>
-          <p className="text-4xl">
-            Hi! My name is <strong>Gabriel Sazo </strong>I am learning build
-            Frontend aplications for Web and Mobile.
-          </p>
-        </section>
+        <HeroSection />
       </main>
     </div>
   );

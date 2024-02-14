@@ -1,35 +1,35 @@
 //INFO: Mobile first to IPhone 12 Pro
-import { useEffect } from "react";
-import HeroSection from "@/components/main/HeroSection";
-import { useThemeContext } from "@/utils/context/ThemeContext";
 
-//Reusable styles
+import { useEffect } from "react";
+import { useThemeContext } from "@/utils/context/ThemeContext";
+import HeroSection from "@/components/main/HeroSection";
+
+//Reusable Tailwind styles
 const navItemBoxes = "w-[83px] h-9 underline";
 
 export default function Home() {
-  /* const [isDarkMode, setIsDarkMode] = useState(false); */
-
   //8 import context to the project
   const { state, dispatch } = useThemeContext();
 
   useEffect(() => {
+    handleDarkModeClass();
+  }, [state.isDarkMode]);
+
+  const handleDarkModeClass = () => {
     if (!state.isDarkMode) {
       document.body.classList.add("dark");
-      //console.log(state.isDarkMode);
     } else {
       document.body.classList.remove("dark");
-      //console.log(state.isDarkMode);
     }
-  }, [state.isDarkMode]);
+  };
 
   const toggleDarkMode = () => {
     if (state.isDarkMode) {
       dispatch({ type: "toLight" });
-      /* document.body.classList.toggle("dark"); */
-      console.log(state.isDarkMode);
+      /* console.log(state.isDarkMode); */
     } else {
       dispatch({ type: "toDark" });
-      console.log(state.isDarkMode);
+      /* console.log(state.isDarkMode); */
     }
 
     /* setIsDarkMode(!isDarkMode);

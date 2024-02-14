@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div id="mainContainer" className="flex flex-col items-center">
-      <header className="flex flex-col w-full bg-[#343434] items-center ">
+      <header className="flex flex-col w-full bg-[#343434] dark:bg-white items-center ">
         <h1 className="text-[#F24E1E] my-2 text-6xl">Portafolio</h1>
         <div className={isDarkMode ? "dark" : ""}>
           <button onClick={toggleDarkMode}>

@@ -5,8 +5,8 @@ const ThemeContext = createContext();
 //3 Initial state reducer obj
 
 const initialState = {
-  background: "black",
-  text: "white",
+  background: "white",
+  text: "black",
 };
 
 //4 Create reducer function dispatcher

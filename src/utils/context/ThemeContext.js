@@ -5,6 +5,7 @@ const ThemeContext = createContext();
 //3 Initial state reducer obj
 
 const initialState = {
+  isDarkMode: true,
   background: "white",
   text: "black",
 };
@@ -14,10 +15,10 @@ const initialState = {
 function themeReducer(state, action) {
   switch (action.type) {
     case "toLight": {
-      return { ...state, background: "white", text: "black" };
+      return { ...state, isDarkMode: false };
     }
     case "toDark": {
-      return { ...state, background: "black", text: "white" };
+      return { ...state, isDarkMode: true };
     }
     default: {
       throw Error("Unknown action: " + action.type);

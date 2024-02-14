@@ -1,5 +1,5 @@
 //INFO: Mobile first to IPhone 12 Pro
-import { useState } from "react";
+import { useEffect } from "react";
 import HeroSection from "@/components/main/HeroSection";
 import { useThemeContext } from "@/utils/context/ThemeContext";
 
@@ -7,20 +7,42 @@ import { useThemeContext } from "@/utils/context/ThemeContext";
 const navItemBoxes = "w-[83px] h-9 underline";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  /* const [isDarkMode, setIsDarkMode] = useState(false); */
+
+  //8 import context to the project
+  const { state, dispatch } = useThemeContext();
+
+  useEffect(() => {
+    if (!state.isDarkMode) {
+      document.body.classList.add("dark");
+      //console.log(state.isDarkMode);
+    } else {
+      document.body.classList.remove("dark");
+      //console.log(state.isDarkMode);
+    }
+  }, [state.isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark");
+    if (state.isDarkMode) {
+      dispatch({ type: "toLight" });
+      /* document.body.classList.toggle("dark"); */
+      console.log(state.isDarkMode);
+    } else {
+      dispatch({ type: "toDark" });
+      console.log(state.isDarkMode);
+    }
+
+    /* setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("dark"); */
   };
 
   return (
     <div id="mainContainer" className="flex flex-col items-center">
       <header className="flex flex-col w-full bg-[#343434] dark:bg-white items-center ">
         <h1 className="text-[#F24E1E] my-2 text-6xl">Portafolio</h1>
-        <div className={isDarkMode ? "dark" : ""}>
+        <div className={state ? "dark" : ""}>
           <button onClick={toggleDarkMode}>
-            {isDarkMode ? "Light Mode" : "Dark Mode"}
+            {state.isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
           <div className="bg-white dark:bg-gray-800 text-black dark:text-white">
             {/* Your content goes here */}

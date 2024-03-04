@@ -7,10 +7,13 @@
     @apply bg-[#d8d8d8];
   }
   h1 {
-    @apply text-6xl;
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-2xl;
   }
   p {
-    @apply text-4xl;
+    @apply text-xl;
   }
   /* ... */
 }

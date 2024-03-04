@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useThemeContext } from "@/utils/context/ThemeContext";
 import HeroSection from "@/components/main/HeroSection";
 import NavBar from "@/components/main/NavBar";
+import ProjectsSection from "@/components/main/ProjectsSection";
 
 export default function Home() {
   //8 import context to the project
@@ -37,7 +38,7 @@ export default function Home() {
   return (
     <div id="mainContainer" className="flex flex-col items-center">
       <header className="flex flex-col w-full bg-[#343434] dark:bg-white items-center ">
-        <h1 className="text-[#F24E1E] my-2 text-6xl">Portafolio</h1>
+        <h1 className="text-[#F24E1E] my-2 text-5xl">Portafolio</h1>
         <div className={state ? "dark" : ""}>
           <button
             className="bg-slate-400 w-24 h-7 rounded-sm"
@@ -51,8 +52,9 @@ export default function Home() {
         </div>
         <NavBar />
       </header>
-      <main className="py-4 m-0">
+      <main className="flex flex-col py-4 m-0 items-center">
         <HeroSection />
+        <ProjectsSection />
       </main>
     </div>
   );

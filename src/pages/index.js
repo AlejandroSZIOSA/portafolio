@@ -3,9 +3,7 @@
 import { useEffect } from "react";
 import { useThemeContext } from "@/utils/context/ThemeContext";
 import HeroSection from "@/components/main/HeroSection";
-
-//Reusable Tailwind styles
-const navItemBoxes = "w-[83px] h-9 underline";
+import NavBar from "@/components/main/NavBar";
 
 export default function Home() {
   //8 import context to the project
@@ -41,37 +39,17 @@ export default function Home() {
       <header className="flex flex-col w-full bg-[#343434] dark:bg-white items-center ">
         <h1 className="text-[#F24E1E] my-2 text-6xl">Portafolio</h1>
         <div className={state ? "dark" : ""}>
-          <button onClick={toggleDarkMode}>
+          <button
+            className="bg-slate-400 w-24 h-7 rounded-sm"
+            onClick={toggleDarkMode}
+          >
             {state.isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
           <div className="bg-white dark:bg-gray-800 text-black dark:text-white">
             {/* Your content goes here */}
           </div>
         </div>
-        <nav className="p-4">
-          <ul className="flex gap-2 text-2xl list-none m-0 p-0">
-            <li className={navItemBoxes}>
-              <a href="#" className="text-[#00D8FF] ml-3">
-                Start
-              </a>
-            </li>
-            <li className={navItemBoxes}>
-              <a href="#" className="text-[#00D8FF] ml-3">
-                Skills
-              </a>
-            </li>
-            <li className={navItemBoxes}>
-              <a href="#" className="text-[#00D8FF] ml-1">
-                Projects
-              </a>
-            </li>
-            <li className={navItemBoxes}>
-              <a href="#" className="text-[#00D8FF] ml-1">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
       </header>
       <main className="py-4 m-0">
         <HeroSection />

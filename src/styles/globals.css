@@ -1,9 +1,18 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: #d8d8d8;
+@layer base {
+  body {
+    @apply bg-[#d8d8d8];
+  }
+  h1 {
+    @apply text-6xl;
+  }
+  p {
+    @apply text-4xl;
+  }
+  /* ... */
 }
 
 /* :root {

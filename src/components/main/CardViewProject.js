@@ -1,15 +1,14 @@
 import React from "react";
+import Image from "next/image";
+import testImg from "/src/assets/projects-img/testImg.png";
 
 /* TODO: Fix Image problem */
 export default function CardViewProject() {
   return (
     <div>
-      <h1>CardView Title</h1>
-      <img
-        className="w-32 h-20 object-cover rounded-full"
-        src="/src/assets/projects-img/testImg.png"
-      />
-      <h2>Description</h2>
+      <h2>Project Title</h2>
+      <Image src={testImg} width={200} height={200} />
+      <h3>Description</h3>
     </div>
   );
 }

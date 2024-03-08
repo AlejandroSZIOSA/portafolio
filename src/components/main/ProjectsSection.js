@@ -8,8 +8,8 @@ import CardViewProject from "./CardViewProject";
 
 export default function ProjectsSection() {
   return (
-    <div className="py-28">
-      <h1>Projects Section</h1>
+    <div className="py-14">
+      <h2>Project Section</h2>
       <CardViewProject />
     </div>
   );

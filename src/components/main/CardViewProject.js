@@ -7,7 +7,7 @@ export default function CardViewProject() {
   return (
     <div>
       <h2>Project Title</h2>
-      <Image src={testImg} width={200} height={200} />
+      <Image src={testImg} width={200} height={200} alt="no image" />
       <h3>Description</h3>
     </div>
   );

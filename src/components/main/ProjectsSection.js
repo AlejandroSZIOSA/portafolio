@@ -4,6 +4,8 @@ import CardViewProject from "./CardViewProject";
 /* TODO: 
 -Add image link as Props
 -Use a list with columns Css
+-Use API Object List 
+-Use component cardViewProject 
 */
 
 export default function ProjectsSection() {

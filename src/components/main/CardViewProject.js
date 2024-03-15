@@ -1,14 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import testImg from "/src/assets/projects-img/testImg.png";
 
 /* TODO: Fix Image problem */
-export default function CardViewProject() {
+export default function CardViewProject({ project }) {
+  const { title, description, imgUrl, gitHubLink } = project;
+
+  //console.log(imgUrl);
   return (
     <div>
-      <h2>Project Title</h2>
-      <Image src={testImg} width={200} height={200} alt="no image" />
-      <h3>Description</h3>
+      <h2>{title}</h2>
+      <Image src={imgUrl} width={300} height={300} alt="no image" />
+      <h3>{description}</h3>
+      <h3>{gitHubLink}</h3>
     </div>
   );
 }

@@ -1,1 +1,2 @@
 -Create Object with projects  {id,title,description, imageLink}
+-Separator component

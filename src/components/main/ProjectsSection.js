@@ -22,8 +22,8 @@ export default function ProjectsSection() {
 
   return (
     <div className="py-14">
-      <h2>Projects</h2>
-      <div className="flex flex-col">
+      <h2 className="text-center p-3">Projects</h2>
+      <div className="flex flex-col gap-4">
         {projects.map((p) => {
           return <CardViewProject key={p.id} project={p} />;
         })}
